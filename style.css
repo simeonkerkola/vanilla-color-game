@@ -1,0 +1,17 @@
+body {
+  background-color: #282C34;
+  color: #fff;
+}
+
+.container {
+  margin: 0 auto; /* CENTER, margin 0 on top and bottom, and auto on left and right*/
+  max-width: 600px;
+}
+
+.square {
+  width: 30%;
+  background: goldenrod;
+  padding-bottom: 30%; /* Add some space to show empty divs */
+  float: left; /* orders everything from left */
+  margin: 1.66%;
+}
