@@ -1,11 +1,29 @@
 body {
-  background-color: #282C34;
+  font-family: Arial;
+  background-color: #21252B;
   color: #fff;
+  letter-spacing: 1px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #343a45;
 }
 
 .container {
   margin: 0 auto; /* CENTER, margin 0 on top and bottom, and auto on left and right*/
   max-width: 600px;
+}
+
+.message {
+  clear: both; /* drop to a new line */
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #343a45;
 }
 
 .square {
