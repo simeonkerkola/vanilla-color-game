@@ -1,8 +1,11 @@
+var numberOfSquares = 6
 var squares = document.querySelectorAll('.square')
 var colorDisplay = document.querySelector('.color-display')
 var message = document.querySelector('.message span')
 var h1 = document.querySelector('h1')
 var resetButton = document.querySelector('.btn-reset')
+var easyBtn = document.querySelector('.btn-easy')
+var hardBtn = document.querySelector('.btn-hard')
 
 // change each color to match given color
 function changeColors(color) {
@@ -24,7 +27,7 @@ function generateRandomColors(amount) {
   return arr
 }
 
-var colors = generateRandomColors(6)
+var colors = generateRandomColors(numberOfSquares)
 
 function newWinningColor() {
   var random = Math.floor(Math.random() * colors.length)
@@ -35,18 +38,46 @@ var winningColor = newWinningColor()
 colorDisplay.textContent = winningColor
 
 resetButton.addEventListener('click', function () {
-  colors = generateRandomColors(6)
+  colors = generateRandomColors(numberOfSquares)
   winningColor = newWinningColor()
   colorDisplay.textContent = winningColor
 
-  for (var i = 0; i < squares.length; i += 1) {
+  for (var i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = colors[i]
   }
   h1.style.background = '#343a45'
   resetButton.textContent = 'Reset'
 })
 
-for (var i = 0; i < squares.length; i += 1) {
+easyBtn.addEventListener('click', function () {
+  easyBtn.classList.add('selected')
+  hardBtn.classList.remove('selected')
+  numberOfSquares = 3
+  colors = generateRandomColors(numberOfSquares)
+  winningColor = newWinningColor()
+  colorDisplay.textContent = winningColor
+  for (var i = 0; i < squares.length; i++) {
+    // if there is a color
+    if (colors[i]) squares[i].style.background = colors[i]
+    // else hide squares
+    else squares[i].style.display = 'none'
+  }
+})
+
+hardBtn.addEventListener('click', function () {
+  hardBtn.classList.add('selected')
+  easyBtn.classList.remove('selected')
+  numberOfSquares = 6
+  colors = generateRandomColors(numberOfSquares)
+  winningColor = newWinningColor()
+  colorDisplay.textContent = winningColor
+  for (var i = 0; i < squares.length; i++) {
+    squares[i].style.background = colors[i]
+    squares[i].style.display = 'block'
+  }
+})
+
+for (var i = 0; i < squares.length; i++) {
   // add initial color to squares
   squares[i].style.backgroundColor = colors[i]
 

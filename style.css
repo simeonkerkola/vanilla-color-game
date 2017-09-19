@@ -6,8 +6,7 @@ body {
   letter-spacing: 1px;
 }
 
-h1 {
-  height: 30px;
+header {
   width: 100%;
   text-align: center;
   padding: 20px 0;
@@ -15,14 +14,14 @@ h1 {
 }
 
 .container {
-  margin: 0 auto; /* CENTER, margin 0 on top and bottom, and auto on left and right*/
+  margin: 1.66% auto; /* CENTER, margin 0 on top and bottom, and auto on left and right*/
   max-width: 600px;
+  max-height: 400px;
 }
 
 .message {
-  height: 30px;
+  height: 20px;
   clear: both; /* drop to a new line */
-  margin: 0 auto;
   width: 100%;
   text-align: center;
   padding: 20px 0;
@@ -35,4 +34,15 @@ h1 {
   padding-bottom: 30%; /* Add some space to show empty divs */
   float: left; /* orders everything from left */
   margin: 1.66%;
+}
+
+button {
+  background: #292e36;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+}
+
+.selected {
+  background: #535d70;
 }
