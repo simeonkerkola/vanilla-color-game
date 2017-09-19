@@ -1,7 +1,8 @@
-var colors = generateRandomColors(6)
 var squares = document.querySelectorAll('.square')
 var colorDisplay = document.querySelector('.color-display')
-var message = document.querySelector('.message p')
+var message = document.querySelector('.message span')
+var h1 = document.querySelector('h1')
+var resetButton = document.querySelector('.btn-reset')
 
 // change each color to match given color
 function changeColors(color) {
@@ -20,8 +21,10 @@ function generateRandomColors(amount) {
     var color = 'rgb(' + r + ', ' + g + ', ' + b + ')'
     arr.push(color)
   }
-  return colors
+  return arr
 }
+
+var colors = generateRandomColors(6)
 
 function newWinningColor() {
   var random = Math.floor(Math.random() * colors.length)
@@ -30,6 +33,18 @@ function newWinningColor() {
 
 var winningColor = newWinningColor()
 colorDisplay.textContent = winningColor
+
+resetButton.addEventListener('click', function () {
+  colors = generateRandomColors(6)
+  winningColor = newWinningColor()
+  colorDisplay.textContent = winningColor
+
+  for (var i = 0; i < squares.length; i += 1) {
+    squares[i].style.backgroundColor = colors[i]
+  }
+  h1.style.background = '#343a45'
+  resetButton.textContent = 'Reset'
+})
 
 for (var i = 0; i < squares.length; i += 1) {
   // add initial color to squares
@@ -42,7 +57,9 @@ for (var i = 0; i < squares.length; i += 1) {
 
     if (clickedColor === winningColor) {
       message.textContent = 'Correct!'
+      resetButton.textContent = 'Play Again?'
       changeColors(winningColor)
+      h1.style.background = winningColor
     } else {
       this.style.backgroundColor = '#21252B' // for some reason clickedColor doesn't work here
       message.textContent = 'Try Again'
