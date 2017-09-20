@@ -6,20 +6,32 @@ body {
   letter-spacing: 1px;
 }
 
+h1 {
+  max-width: 420px;
+  font-weight: normal;
+  margin: 0 auto;
+}
+
 header {
   width: 100%;
   text-align: center;
   padding: 20px 0;
   background-color: #343a45;
+  padding: 20px;
+}
+
+.color-display {
+  font-size: 2rem;
 }
 
 .container {
-  margin: 1.66% auto; /* CENTER, margin 0 on top and bottom, and auto on left and right*/
+  margin: 2% auto; /* CENTER, margin 0 on top and bottom, and auto on left and right*/
   max-width: 600px;
   max-height: 400px;
 }
 
 .message {
+  font-size: 1.2rem;
   height: 20px;
   clear: both; /* drop to a new line */
   width: 100%;
@@ -34,13 +46,28 @@ header {
   padding-bottom: 30%; /* Add some space to show empty divs */
   float: left; /* orders everything from left */
   margin: 1.66%;
+  border-radius: 20%;
+  transition: background 0.2s;
+  --webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
 }
 
 button {
+  font-size: .8rem;
   background: #292e36;
   color: #fff;
-  padding: 10px 20px;
+  margin: 0 20px;
+  padding: 10px 0;
+  min-width: 100px;
   border: none;
+  outline: none; /* bye bye annoying blue outline */
+  transition: all .2s;
+  --webkit-transition: transition: all .2s;
+  -moz-transition: transition: all .2s;
+}
+
+button:hover {
+  background: #475061;
 }
 
 .selected {
