@@ -35,7 +35,6 @@ function newWinningColor() {
 }
 
 var winningColor = newWinningColor()
-colorDisplay.textContent = winningColor
 
 function reset() {
   // generate new colors
@@ -43,6 +42,7 @@ function reset() {
 
   // pick a new random color from array
   winningColor = newWinningColor()
+  colorDisplay.textContent = winningColor
 
   message.textContent = ''
 
