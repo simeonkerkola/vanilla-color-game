@@ -1,6 +1,5 @@
 node_modules/
 server.log
-access-key
 .eslintrc.js
 package-lock.json
 package.json
