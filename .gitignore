@@ -1,8 +1,6 @@
 node_modules/
 server.log
 .eslintrc.js
-package-lock.json
-package.json
 
 ### Node ###
 
