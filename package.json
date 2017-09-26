@@ -1,0 +1,29 @@
+{
+  "name": "color-game",
+  "version": "1.0.0",
+  "description": "## Building this game was part of [this](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/content) tutorial",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sssmi/color-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sssmi/color-game/issues"
+  },
+  "homepage": "https://github.com/sssmi/color-game#readme",
+  "devDependencies": {
+    "eslint": "^4.7.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0"
+  },
+  "dependencies": {
+    "express": "^4.15.5"
+  }
+}
